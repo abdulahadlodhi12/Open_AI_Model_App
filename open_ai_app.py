@@ -11,6 +11,6 @@ with st.form('my_form'):
     submitted = st.form_submit_button("Submit")
     if not open_ai_key.startswith('sk-'):
         st.warning("Please Enter Correct OpenAI Api Key")
-    if open_ai_key.startswith('sk-'):
+    if submitted and open_ai_key.startswith('sk-'):
         generate_response(text)
     
